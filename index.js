@@ -1,9 +1,38 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+
+function reverseString(word) {
+  // create an array from the input string
+  const wordArray = word.split("");
+  // reverse the array
+  const reversedWordArray = wordArray.reverse();
+  // create a string from the reversed array
+  const reversedWord = reversedWordArray.join("");
+  // return the reversed string
+  return reversedWord;
 }
 
+function isPalindrome(word) {
+  const reversedWord = reverseString(word);
+  return word === reversedWord
+}
+
+
+
 /* 
-  Add your pseudocode here
+function isPalindrome takes in 1 string word as an argument. the function returns true if the string is a palindrome. the function returns false if it is not a palindrome.  
+ 
+input = argument
+output = true or false
+  if input === palindrome, return true
+  if input !== palindrome, return false
+ 
+  make word into an array
+  Array.from(word)
+ 
+  put it into a variable
+  const arrayOfWord = Array.from(word)
+ 
+  if arrayOfWord === reverse(arrayOfWord), return 'True'
+ 
 */
 
 /*
